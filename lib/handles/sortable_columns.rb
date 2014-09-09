@@ -172,7 +172,7 @@ module Handles  #:nodoc:
       #   <%= sortable_column "Created At", :direction => :asc %>
       def sortable_column(title, options = {})    #:doc:
         options = options.dup
-        extra_params = options.delete(:additional_params)
+        extra_params = options.delete(:additional_params) || {}
         params.merge!(extra_params)
         o = {}
         conf = {}
